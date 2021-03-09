@@ -21,6 +21,7 @@ public class TestLibretto {
 		
 		Libretto libretto25 = libretto.votiUguali(25);
 		System.out.println(libretto25);
+		System.out.println(libretto.ricercaCorso("Fisica 1"));
 		
 	}
 	// questo programma creerà un libretto e dira di aggiungere dei voti
