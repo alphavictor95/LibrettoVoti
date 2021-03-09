@@ -1,1 +1,0 @@
-package it.polito.tdp.libretto.model;
