@@ -17,6 +17,35 @@ public class Libretto {
 	
 		this.voti.add(v);
 	}
+	
+	/*public String votiUguali(int punteggio) {
+		//calcola una stringa che contiene i voti 
+		//sara poi il chiamante a stampare
+	}	*/
+	public List<Voto> listaVotiUguali(int punteggio){
+		//restituisce solo i voti uguali al criterio
+		//difetto: espone la struttura dati all esterno
+		List<Voto> risultato = new ArrayList<>();
+		for(Voto v : voti) {
+			if(v.getVoto()==punteggio) {
+				risultato.add(v);
+			}
+		}
+		return risultato;
+	}
+	
+	public Libretto votiUguali (int punteggio) {
+		// libretto che contiene soltato gli esami con il voto passato come criterio
+		Libretto risultatoLibretto = new Libretto();
+		for(Voto v : voti) {
+			if(v.getVoto()==punteggio) {
+				risultatoLibretto.add(v);
+				
+			}
+		}
+		return risultatoLibretto;
+	}
+	
 	public String toString() {
 		String s = "";
 		for (Voto v : this.voti) {
