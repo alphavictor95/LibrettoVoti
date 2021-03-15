@@ -46,6 +46,12 @@ public class Libretto {
 		return risultatoLibretto;
 	}
 	
+	/**
+	 * Ricerca un voto al corso passato come parametro
+	 * @param nomeCorso
+	 * @return
+	 */
+	
 	public Voto ricercaCorso(String nomeCorso) {
 		Voto risultato = null;
 		for(Voto v : voti) {
