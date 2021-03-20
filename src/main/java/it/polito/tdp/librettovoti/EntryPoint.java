@@ -16,12 +16,19 @@ public class EntryPoint extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+    	
+    	// devo creare una classe loader ed un oggetto loader che ha un metodo getController
     	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
       //  Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
     	Parent root = loader.load();
+    	
+    	// salvo il controller preso dal loader in un oggetto che mi so coreato
     	FXMLController controller = loader.getController();
     	
+    	//creiamo il modello
         Libretto model = new Libretto();
+        
+        //chiamo il metodo setModel per settare il model sulla classe stessa
         controller.setModel(model);
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");

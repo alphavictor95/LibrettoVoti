@@ -1,7 +1,5 @@
 package it.polito.tdp.librettovoti;
 
-import java.awt.TextArea;
-import java.awt.TextField;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -10,12 +8,22 @@ import it.polito.tdp.librettovoti.model.Libretto;
 import it.polito.tdp.librettovoti.model.Voto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+
 
 public class FXMLController  {
+	
+	//il controller deve conoscere il modello
+	private Libretto model;
      @FXML
         private ResourceBundle resources;
 
+     
+     @FXML
+     private Button btnInserisci;
+     
         @FXML
         private URL location;
 
@@ -32,7 +40,7 @@ public class FXMLController  {
         private TextArea txtResult;
         
 
-        private Libretto model;
+        
         @FXML
         void handleInserisci(ActionEvent event) {
 
@@ -71,6 +79,7 @@ public class FXMLController  {
 
     }  
     
+    // serve ad assegnare un modello alla variabile creata
     public void setModel (Libretto model) {
     	this.model=model;
     	}
